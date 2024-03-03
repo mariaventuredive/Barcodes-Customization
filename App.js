@@ -95,7 +95,7 @@ const App = () => {
   return (
     <ScrollView>
       <View style={styles.sectionContainer}>
-        <Text style={styles.Heading}>BarCode</Text>
+        <Text style={styles.Heading}>BarCode Designs</Text>
         {/* <QRCode
           color='#6897bb'
 
@@ -170,37 +170,39 @@ const App = () => {
           />
         </View>
         <View style={styles.buttonContainer}>
-          <View style={{ width: '50%' }}>
-            <TouchableOpacity
-              style={{
-                backgroundColor: 'green',
-                alignItems: 'center',
-                height: 35,
-                justifyContent: 'center',
-                borderRadius: 5,
-              }}
-              onPress={handleScan}
-            >
-              {loader ? (
-                <ActivityIndicator />
-              ) : (
-                <Text style={{ color: 'white' }}>Scan</Text>
-              )}
-            </TouchableOpacity>
-          </View>
-          <View style={{ width: '50%', marginLeft: 10 }}>
-            <TouchableOpacity
-              style={{
-                backgroundColor: 'grey',
-                alignItems: 'center',
-                height: 35,
-                justifyContent: 'center',
-                borderRadius: 5,
-              }}
-              onPress={openImagePicker}>
-              <Text style={{ color: 'white' }}>Upload from gallery</Text>
-            </TouchableOpacity>
-          </View>
+
+          <TouchableOpacity
+            style={{
+              backgroundColor: 'red',
+              alignItems: 'center',
+              height: 45,
+              justifyContent: 'center',
+              borderRadius: 5,
+              width: '48%'
+            }}
+            onPress={handleScan}
+          >
+            {loader ? (
+              <ActivityIndicator />
+            ) : (
+              <Text style={{ color: 'white' }}>Scan</Text>
+            )}
+          </TouchableOpacity>
+
+
+          <TouchableOpacity
+            style={{
+              backgroundColor: 'grey',
+              alignItems: 'center',
+              height: 45,
+              justifyContent: 'center',
+              borderRadius: 5,
+              width: '48%'
+            }}
+            onPress={openImagePicker}>
+            <Text style={{ color: 'white' }}>Upload from gallery</Text>
+          </TouchableOpacity>
+
 
         </View>
         <View style={styles.textValue}>
@@ -222,10 +224,12 @@ const styles = StyleSheet.create({
     alignItems: 'center',
     marginTop: 70,
     paddingHorizontal: 24,
+    marginBottom:50
   },
   Heading: {
     fontSize: 20,
-    fontWeight: '400',
+    fontWeight: '900',
+
   },
   input: {
     // backgroundColor: 'red',
@@ -240,6 +244,8 @@ const styles = StyleSheet.create({
     display: 'flex',
 
     flexDirection: 'row',
+    justifyContent: 'space-between',
+    width: '90%'
   },
   root: {
     justifyContent: 'center',
