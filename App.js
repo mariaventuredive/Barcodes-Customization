@@ -21,26 +21,26 @@ import {
 } from 'react-native';
 import { BarCodeScanner } from 'expo-barcode-scanner';
 import QRCodeStyled from 'react-native-qrcode-styled';
-import CirclePieces from "./CirclePieces";
+import CirclePieces from "./barcodeComponents/CirclePieces";
 import DownloadQR from "./DownloadQR";
 
-import CustomPieces from './CustomPieces';
+import CustomPieces from './barcodeComponents/CustomPieces';
 
 //import GluedRoundedPieces from './examples/GluedRoundedPieces';
-import LiquidPieces from './LiquidPieces';
+import LiquidPieces from './barcodeComponents/LiquidPieces';
 //import CutCornersPieces from './examples/CutCornersPieces';
-import RainStyle from './RainStyle';
+import RainStyle from './barcodeComponents/RainStyle';
 //import LinearGradient from './LinearGradient';
-import CustomEyes from './CustomEyes';
+import CustomEyes from './barcodeComponents/CustomEyes';
 
-import CustomPiecesAndEyes from './CustomPiecesAndEyes';
+import CustomPiecesAndEyes from './barcodeComponents/CustomPiecesAndEyes';
 
 const App = () => {
   const [url, setUrl] = useState('');
 
   const [loader, setLoader] = useState(false);
   const [loader1, setLoader1] = useState(false);
-  let logoFromFile = require('./logo.png');
+  let logoFromFile = require('./barcodeComponents/logo.png');
   const handleScan = async () => {
     setLoader(true);
     if (url !== '') {
@@ -140,7 +140,7 @@ const App = () => {
           <View style={styles.logoContainer}>
             <Image
 
-              source={require('./logo.png')}
+              source={require('./barcodeComponents/logo.png')}
               style={[styles.logo, {}]} />
           </View>
 
@@ -158,7 +158,7 @@ const App = () => {
           padding={24}
           pieceSize={8}
           backgroundImage={{
-            href: require('./logo.png'),
+            href: require('./barcodeComponents/logo.png'),
             // ... any other svg Image props (x, y, preserveAspectRatio, opacity, ...etc)
           }}
         />
