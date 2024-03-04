@@ -101,5 +101,6 @@ const styles = StyleSheet.create({
     textTransform: 'uppercase',
     fontWeight: 'bold',
     borderRadius: 8,
+    
   },
 });
